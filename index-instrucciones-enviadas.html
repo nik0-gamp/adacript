@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instrucciones enviadas - AdaCript</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                to bottom,
+                #05060B,
+                #111827,
+                #252A45
+            );
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+
+        .recuperacion {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 140px;
+            padding: 30px;
+        }
+
+        /* FORMULARIO */
+
+        .formulario {
+            width: 450px;
+            max-width: 100%;
+        }
+
+        .contenedor {
+            width: 100%;
+            background: #101827;
+            border: 1px solid #24324a;
+            border-radius: 8px;
+            padding: 35px 30px;
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.20);
+        }
+
+        /* TITULO */
+
+        .contenedor h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #f2f2f2;
+            margin-bottom: 12px;
+        }
+
+        /* DESCRIPCION */
+
+        .descripcion {
+            color: #8993a7;
+            font-size: 11px;
+            line-height: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* MENSAJE */
+
+        .mensaje {
+            background: #111b2e;
+            border: 1px solid #2b3a55;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #d0d4dc;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        /* BOTONES */
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #263650;
+            background: #2a3b5b;
+            color: #e0e3e8;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #344a70;
+            color: #ffffff;
+        }
+
+        /* LOGO */
+
+        .logo-seccion {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(90px);
+        }
+
+        .logo-imagen {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .logo-letras {
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .recuperacion {
+                gap: 50px;
+            }
+
+            .formulario {
+                width: 400px;
+            }
+
+            .logo-seccion {
+                width: 300px;
+                transform: translateX(0);
+            }
+
+            .logo-imagen {
+                width: 350px;
+            }
+
+            .logo-letras {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            .recuperacion {
+                flex-direction: column;
+                gap: 30px;
+                padding: 25px;
+            }
+
+            .formulario {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .logo-seccion {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .logo-imagen {
+                width: 300px;
+            }
+
+            .logo-letras {
+                width: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .recuperacion {
+                padding: 20px 15px;
+                gap: 25px;
+            }
+
+            .contenedor {
+                padding: 25px 20px;
+            }
+
+            .contenedor h1 {
+                font-size: 23px;
+            }
+
+            .mensaje {
+                font-size: 10px;
+            }
+
+            .btn {
+                height: 42px;
+                font-size: 11px;
+            }
+
+            .logo-seccion {
+                max-width: 280px;
+            }
+
+            .logo-imagen {
+                width: 250px;
+                margin-bottom: 10px;
+            }
+
+            .logo-letras {
+                width: 190px;
+            }
+        }
+
+        @media (max-width: 350px) {
+
+            .recuperacion {
+                padding: 15px 10px;
+            }
+
+            .contenedor {
+                padding: 20px 15px;
+            }
+
+            .contenedor h1 {
+                font-size: 21px;
+            }
+
+            .logo-imagen {
+                width: 210px;
+            }
+
+            .logo-letras {
+                width: 160px;
+            }
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="recuperacion">
+
+        <!-- MENSAJE -->
+
+        <section class="formulario">
+
+            <div class="contenedor">
+
+                <h1>Instrucciones enviadas</h1>
+
+                <p class="descripcion">
+                    Hemos enviado las instrucciones para recuperar tu contraseña.
+                </p>
+
+                <div class="mensaje">
+                    Revisa tu correo electrónico y sigue las instrucciones
+                    para restablecer tu contraseña. Si no encuentras el mensaje,
+                    revisa también la carpeta de spam o correo no deseado.
+                </div>
+
+                <!-- BOTON REENVIAR -->
+
+                <button class="btn" type="button">
+                    Reenviar correo
+                </button>
+
+                <!-- BOTON VOLVER -->
+
+                <button class="btn" type="button">
+                    ← &nbsp; Volver a iniciar sesión
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- LOGO -->
+
+        <section class="logo-seccion">
+
+            <img
+                src="img/letras logo 1.png"
+                alt="Logo AdaCript"
+                class="logo-imagen"
+            >
+
+            <img
+                src="img/logoAdacript.png"
+                alt="AdaCript"
+                class="logo-letras"
+            >
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
+
