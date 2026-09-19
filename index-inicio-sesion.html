@@ -7,20 +7,35 @@
     <link rel='stylesheet' href='css/style-inicio-sesion-crear-cuenta.css'>
 </head>
 <body>
-    <div class="logo">
-        <img src="img/logoAdacript.png" alt="Logo">
-        <img src="img/letras logo 1.png" alt="Letras">
-    </div>
 
-    <div class="contenedor" id="form-login">
-        <h1>Inicio de sesion</h1>
-        <p>vas a iniciar sesion en adacript</p>
-        <p><strong>Nombre de usuario</strong></p>
-        <input type="nombre de usuario">
-        <p> <strong>contraseña</strong></p>
-        <input type="contraseña" class="contraseña">
-        <button class="inicio">iniciar sesion</button>
-        <button id="btn-ir-a-registro">crear cuenta</button>
+    <div class="pantalla-login">
+        
+        <div class="logo">
+            <img src="img/logoAdacript.png" alt="Logo" class="img-logo">
+            <img src="img/letras logo 1.png" alt="Letras" class="img-letras">
+        </div>
+
+        <div class="contenedor" id="form-login">
+            <h1>Inicio de sesión</h1>
+            <p class="subtitulo">Vas a iniciar sesión en AdaCript</p>
+            
+            <div class="campo">
+                <label>Nombre de usuario</label>
+                <input type="text">
+            </div>
+            
+            <div class="campo contraseña">
+                <div class="fila-label">
+                    <label>Contraseña</label>
+                    <a href="#" class="link-olvido">¿Olvidaste tu contraseña?</a>
+                </div>
+                <input type="password">
+            </div>
+            
+            <button class="btn-inicio">Iniciar sesión</button>
+            <button id="btn-ir-a-registro" class="btn-registro">Crear cuenta</button>
+        </div>
+
     </div>
 
 </body>

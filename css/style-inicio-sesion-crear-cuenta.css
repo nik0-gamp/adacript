@@ -8,69 +8,232 @@
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to bottom, #05060B, #111827, #252A45);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.pantalla-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1100px;
 }
 
 .logo {
-    height: auto;
-    width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+.img-logo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.img-letras {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
 }
 
 .contenedor{
-    border: 1px solid rgba(255, 255, 255, 0.308);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     height: auto;
-    width: 700px;
+    width: 100%;
+    max-width: 480px;
     border-radius: 12px;
-    background: linear-gradient(to top, #05060B, #111827, #252A45);
-    padding: 60px;
-    margin-left: 300px;
+    background: #101827;
+    padding: 45px 40px;
     color: aliceblue;
+}
+
+.contenedor.oculto {
+    display: none !important;
 }
 
 h1 {
-    font-size: 4em; 
+    font-size: 2.2em; 
+    margin-bottom: 8px;
+    color: #ffffff;
 }
- p {
+
+.subtitulo {
     font-size: 1em; 
-    line-height: 2.8; 
-}
-button {
-    font-size: 1.5em; 
-    padding: 0.7em 9em; 
-    border-radius: 12px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.616);
-    color: aliceblue;
-    margin: 0 auto 22px auto;
- }
-
- .contraseña{
-    margin-bottom: 40px;
- }
-
-button:hover{
-    background-color: rgba(240, 255, 255, 0.39);
+    color: #8993a7;
+    margin-bottom: 30px;
 }
 
-input{
-    font-size: 3em;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.308);
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
-label{
-    font-size: 1em; 
-    line-height: 2.8; 
+.contraseña {
+    margin-bottom: 30px;
+}
+
+.fila-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-size: 0.9em; 
     font-weight: bold;
+    color: #d0d4dc;
+}
+
+.link-olvido {
+    font-size: 0.8em;
+    color: #8993a7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-olvido:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 1.05em;
+    padding: 0 15px;
+    border-radius: 6px;
+    background-color: #111b2e;
+    border: 1px solid #2b3a55;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- ESTILO BASE PARA TODOS LOS BOTONES --- */
+button {
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 1.1em; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- CONTENEDOR PARA LOS DOS BOTONES DEL REGISTRO --- */
+.grupo-botones {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- BOTÓN ATRÁS (POR ID) --- */
+#btn-atras {
+    background-color: transparent;
+    border: 1px solid #2b3a55;
+    color: #8993a7;
+    max-width: 100px;
+}
+
+#btn-atras:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* --- BOTÓN CLÁSICO DE REGISTRO EN EL INICIO DE SESIÓN --- */
+.btn-registro {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #8993a7;
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
+.btn-registro:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+@media (max-width: 900px) {
+    .pantalla-login {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .logo {
+        max-width: 300px;
+    }
+
+    .img-logo {
+        max-width: 180px;
+    }
+
+    .img-letras {
+        max-width: 150px;
+    }
+
+    .contenedor {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .contenedor {
+        padding: 30px 20px;
+    }
+
+    .fila-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .grupo-botones {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    #btn-atras {
+        max-width: 100%;
+    }
 }
