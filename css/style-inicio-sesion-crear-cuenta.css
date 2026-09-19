@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #05060B, #111827, #252A45);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.logo {
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor{
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    height: auto;
+    width: 700px;
+    border-radius: 12px;
+    background: linear-gradient(to top, #05060B, #111827, #252A45);
+    padding: 60px;
+    margin-left: 300px;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 4em; 
+}
+ p {
+    font-size: 1em; 
+    line-height: 2.8; 
+}
+button {
+    font-size: 1.5em; 
+    padding: 0.7em 9em; 
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.616);
+    color: aliceblue;
+    margin: 0 auto 22px auto;
+ }
+
+ .contraseña{
+    margin-bottom: 40px;
+ }
+
+button:hover{
+    background-color: rgba(240, 255, 255, 0.39);
+}
+
+input{
+    font-size: 3em;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+}
+
+label{
+    font-size: 1em; 
+    line-height: 2.8; 
+    font-weight: bold;
+}
