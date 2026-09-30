@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BioStock Manager</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="CSS/manager.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- side barf-->
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <img class="logo-1" src="img/logoAdacript.png" alt="">
+            </div>
+
+            <h4>BioStock Manager</h4>
+
+        </div>
+
+        <nav class="menu">
+
+            <a href="#" class="menu-item active">
+                <i class="bi bi-house-door"></i>
+                <span>Inicio</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-bar-chart-line"></i>
+                <span>Ventas</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Restaurante</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-box-seam"></i>
+                <span>Inventario</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-bag"></i>
+                <span>Compras</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-people"></i>
+                <span>Personal</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-cup-hot"></i>
+                <span>Cocina</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-truck"></i>
+                <span>Domicilios</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-file-earmark-bar-graph"></i>
+                <span>Reportes</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="bi bi-key"></i>
+                <span>Administrador</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- contenido principal :3-->
+    <main class="content">
+
+<section class="ventas-page">
+
+    <!-- ENCABEZADO -->
+    <div class="ventas-header">
+
+        <div class="ventas-title">
+
+            <div class="ventas-icon">
+                <i class="bi bi-bag"></i>
+            </div>
+
+            <div>
+                <h1>Ventas</h1>
+                <p>Gestiona y controla todas las ventas del restaurante</p>
+            </div>
+
+        </div>
+
+        <button class="new-sale">
+            <i class="bi bi-plus-lg"></i>
+            Nueva venta
+        </button>
+
+    </div>
+
+
+    <!-- stats -->
+    <div class="row g-3 sales-stats">
+
+        <!-- Ventas -->
+        <div class="col-xl-3 col-md-6">
+
+            <div class="sales-card">
+
+                <div class="sales-card-top">
+
+                    <div>
+                        <span>Ventas del día</span>
+                        <h2>$1.250.000</h2>
+
+                        <small class="positive">
+                            ↑ 12% &nbsp;vs. ayer
+                        </small>
+                    </div>
+
+                    <div class="sales-stat-icon purple">
+                        <i class="bi bi-bag"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="sales-card">
+
+                <div class="sales-card-top">
+
+                    <div>
+                        <span>Pedidos hoy</span>
+                        <h2>24</h2>
+
+                        <small class="positive">
+                            ↑ 8% &nbsp;vs. ayer
+                        </small>
+                    </div>
+
+                    <div class="sales-stat-icon blue">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="sales-card">
+
+                <div class="sales-card-top">
+
+                    <div>
+                        <span>Mesas ocupadas</span>
+                        <h2>6/10</h2>
+
+                        <small class="positive">
+                            − 0% &nbsp;vs. ayer
+                        </small>
+                    </div>
+
+                    <div class="sales-stat-icon green">
+                        <i class="bi bi-cup-hot"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-xl-3 col-md-6">
+
+            <div class="sales-card">
+
+                <div class="sales-card-top">
+
+                    <div>
+                        <span>Ticket promedio</span>
+                        <h2>$52.083</h2>
+
+                        <small class="negative">
+                            ↓ 5% &nbsp;vs. ayer
+                        </small>
+                    </div>
+
+                    <div class="sales-stat-icon pink">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="sales-tabs">
+
+        <button class="tab-active">Ventas</button>
+        <button>Pedidos en preparación</button>
+        <button>Historial</button>
+        <button>Devoluciones</button>
+
+    </div>
+
+
+
+    <div class="row g-3">
+
+        <div class="col-xl-8">
+
+            <div class="sales-table-card">
+
+                <div class="sales-table-header">
+
+                    <h3>Ventas recientes</h3>
+
+                    <div class="table-filters">
+
+                        <div class="search-sale">
+
+                            <i class="bi bi-search"></i>
+
+                            <input
+                                type="text"
+                                placeholder="Buscar venta..."
+                            >
+
+                        </div>
+
+                        <select>
+                            <option>Hoy</option>
+                            <option>Ayer</option>
+                            <option>Esta semana</option>
+                            <option>Este mes</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TABLA -->
+
+                <div class="table-responsive">
+
+                    <table class="sales-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>N° VENTA</th>
+                                <th>CLIENTE</th>
+                                <th>TIPO</th>
+                                <th>TOTAL</th>
+                                <th>ESTADO</th>
+                                <th>FECHA</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>#10045</td>
+
+                                <td>Mesa 5</td>
+
+                                <td>
+                                    <span class="sale-type restaurant">
+                                        <i class="bi bi-fork-knife"></i>
+                                        Restaurante
+                                    </span>
+                                </td>
+
+                                <td>$78.000</td>
+
+                                <td>
+                                    <span class="sale-status completed">
+                                        Completada
+                                    </span>
+                                </td>
+
+                                <td>
+                                    24/09<br>
+                                    <small>08:42</small>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#10044</td>
+
+                                <td>Juan Pérez</td>
+
+                                <td>
+                                    <span class="sale-type delivery">
+                                        <i class="bi bi-bicycle"></i>
+                                        Domicilio
+                                    </span>
+                                </td>
+
+                                <td>$45.500</td>
+
+                                <td>
+                                    <span class="sale-status preparing">
+                                        En preparación
+                                    </span>
+                                </td>
+
+                                <td>
+                                    24/09<br>
+                                    <small>08:15</small>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#10043</td>
+
+                                <td>Mesa 3</td>
+
+                                <td>
+                                    <span class="sale-type restaurant">
+                                        <i class="bi bi-fork-knife"></i>
+                                        Restaurante
+                                    </span>
+                                </td>
+
+                                <td>$92.000</td>
+
+                                <td>
+                                    <span class="sale-status completed">
+                                        Completada
+                                    </span>
+                                </td>
+
+                                <td>
+                                    24/09<br>
+                                    <small>07:54</small>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#10042</td>
+
+                                <td>María Gómez</td>
+
+                                <td>
+                                    <span class="sale-type delivery">
+                                        <i class="bi bi-bicycle"></i>
+                                        Domicilio
+                                    </span>
+                                </td>
+
+                                <td>$60.000</td>
+
+                                <td>
+                                    <span class="sale-status route">
+                                        En camino
+                                    </span>
+                                </td>
+
+                                <td>
+                                    24/09<br>
+                                    <small>07:30</small>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#10041</td>
+
+                                <td>Mesa 7</td>
+
+                                <td>
+                                    <span class="sale-type restaurant">
+                                        <i class="bi bi-fork-knife"></i>
+                                        Restaurante
+                                    </span>
+                                </td>
+
+                                <td>$85.500</td>
+
+                                <td>
+                                    <span class="sale-status completed">
+                                        Completada
+                                    </span>
+                                </td>
+
+                                <td>
+                                    24/09<br>
+                                    <small>07:12</small>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <div class="sales-pagination">
+
+                    <span>Mostrando 5 de 24 ventas</span>
+
+                    <div>
+
+                        <button>
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <button class="page-active">1</button>
+
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                        <button>5</button>
+
+                        <button>
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- venta actual-->
+
+        <div class="col-xl-4">
+
+            <div class="current-sale">
+
+                <h3>
+                    <i class="bi bi-cart3"></i>
+                    Venta actual
+                </h3>
+
+
+                <!-- ESTADO VACÍO -->
+
+                <div class="empty-sale">
+
+                    <div class="empty-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <strong>No hay venta en curso</strong>
+
+                    <p>
+                        Inicia una nueva venta para
+                        registrar productos
+                    </p>
+
+                </div>
+
+
+                <button class="new-sale full">
+
+                    <i class="bi bi-plus-lg"></i>
+
+                    Nueva venta
+
+                </button>
+
+
+                <!-- MÉTODOS DE PAGO -->
+
+                <h4 class="payment-title">
+                    Métodos de pago
+                </h4>
+
+
+                <div class="payment-method">
+
+                    <span>
+                        <i class="bi bi-cash"></i>
+                        Efectivo
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </div>
+
+
+                <div class="payment-method">
+
+                    <span>
+                        <i class="bi bi-credit-card"></i>
+                        Tarjeta
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </div>
+
+
+                <div class="payment-method">
+
+                    <span>
+                        <i class="bi bi-bank"></i>
+                        Transferencia
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </div>
+
+
+                <div class="payment-method">
+
+                    <span>
+                        <i class="bi bi-truck"></i>
+                        Domicilio
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+
+
+<!-- Bootstrap jota ese  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
